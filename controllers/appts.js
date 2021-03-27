@@ -35,7 +35,9 @@ function show (req,res) {
         Appt.find({appt: appt._id}, function(err, appts) {
             if (err) return next(err);
             res.render("appts/show", {
-                appt 
+                appt,
+                title: 'Appointments',
+                user: req.user,
             });
         })
     });

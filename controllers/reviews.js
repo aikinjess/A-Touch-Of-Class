@@ -1,27 +1,51 @@
-const Appt = require('../models/appt')
+const Appt = require('../models/appt');
+const Review = require('../models/review');
 
 module.exports = {
-    index,
+    new: newReview,
     createReview,
+    index,
+    show
     
-  
-};
+}; 
 
-function index(req,res) {
-    Appt.find({}, function(err, appts) {
-        if (err) return next(err);
-        res.render("appts/index", { appts });
+
+function show(req, res){
+    // Find the movie by id
+    Review.findById(req.params.id, function(err, review) {
+      // Pass the movie to a callback function
+      // and render a show view
+      res.render('reviews/show', {
+        title: 'Reviews',
+        review
+      })
     })
+  }
+
+  function index(req, res) {
+    // Find all the movies
+    Review.find({}, function(err, reviews){
+      // Render index view
+      res.render("reviews/index", {
+        reviews: reviews,
+        title: 'All Reviews'
+      })
+    })
+  }
+
+function newReview(req,res) {
+    res.render("reviews/new", 
+        { id: req.params.id });
 }
 
 
 function createReview(req, res) {
-    Appt.findById(req.params.id)
-    .then((appt) => {
-      appt.reviews.push(req.body)
-      appt.save()
+    Review.findById(req.params.id)
+    .then((review) => {
+      review.reviews.push(req.body)
+      review.save()
       .then(()=> {
-        res.redirect(`/appts/${appt.slug}`)
+        res.redirect(`/reviews/${review.slug}`)
       })
     })
   }
