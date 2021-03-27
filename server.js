@@ -18,9 +18,13 @@ require("./config/database");
 // load passport
 require("./config/passport");
 
+
 // require routes
 const indexRouter = require("./routes/index");
 const authRouter = require("./routes/auth");
+const apptsRouter = require("./routes/appts")
+const reviewsRouter = require("./routes/reviews")
+
 
 // view engine setup
 app.set("views", path.join(__dirname, "views"));
@@ -52,7 +56,8 @@ app.use(passport.session());
 // router middleware
 app.use("/", indexRouter);
 app.use("/auth", authRouter);
-
+app.use("/appts", apptsRouter);
+app.use("/reviews", reviewsRouter);
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
   next(createError(404));
