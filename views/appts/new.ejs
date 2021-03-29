@@ -12,15 +12,15 @@
 </head>
 <header>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-            <a class="navbar-brand" href="/">Jessica's Booking Co. <i class="fas fa-plane"></i></a>
+            <a class="navbar-brand" href="/">A TOUCH OF CLASS</a>
             </button>
             <div class="collapse navbar-collapse">
               <ul class="navbar-nav mr-auto">
                 <li class="nav-item">
-                  <a class="nav-link" href="/flights">All Flights</a>
+                  <a class="nav-link" href="/appts">Scheduled Appointments</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="/flights/new">Book a Flight <i class="far fa-plus-square"></i></a>
+                  <a class="nav-link" href="/appts/new">Book <i class="far fa-plus-square"></i></a>
                 </li>
             </div>
       </nav>
@@ -106,6 +106,48 @@
         </div>
     </div>
     
+
+<!--Book Appt-->
+
+<section>
+    <h1>Book Appointment</h1>
+    <form action="/appts" method="POST">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Stylist</th>
+                    <th>Service</th>
+                    <th>Date</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <select name="stylist">
+                            <option value="Jessica">Jessica</option>
+                            <option value="Chloe">Chloe</option>
+                            <option value="Miamor">Miamor</option>
+                        </select>
+                    </td>
+                    <td>
+                        <select name="service">
+                            <option value="Extensions">Extensions</option>
+                            <option value="Box Braids">Box Braids</option>
+                            <option value="Wash and Style" >Wash and Style</option>
+                            <option value="Full Color" >LAX</option>
+                            <option value="Partial Color">SAN</option>
+                        </select>
+                    </td>
+                    <td>
+                        <input type="datetime-local" name="date" value="2021-03-22T15:30" min="2021-03-22T00:00" max="2022-03-22T00:00">
+                         </td>
+                </tr>
+            </tbody>
+        </table> <input type="submit" value="Book" />  </form>
+</section>
+
+
+
     
     </body>
     </html>

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="homepage-bg">
+<html lang="en" class="new-appt-bg">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,9 +8,78 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="/stylesheets/style.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 </head>
+<header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <a class="navbar-brand" href="/">A TOUCH OF CLASS</a>
+            </button>
+            <div class="collapse navbar-collapse">
+              <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                  <a class="nav-link" href="/appts">Scheduled Appointments</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/appts/new">Book <i class="far fa-plus-square"></i></a>
+                </li>
+            </div>
+      </nav>
+</header>
+
+
+
 <body>
 
+
+
+    <h1>Appointment</h1>
+	<table class="table" id="flight-index">
+		<thead>
+			<th scope="col">Stylist</th>
+			<th scope="col">Service</th>
+			<th scope="col">Date</th>
+			<th scope="col">Delete</th>
+		</thead>
+		<tbody>
+			<% appts.forEach(function(appt) { 
+                    let todayDate = new Date()
+                    let apptDate = appt.date
+                    if (todayDate < apptDate) {
+                    
+                %>
+				<tr>
+					<td class="date">
+						<%= appt.stylist %>
+					</td>
+					<td class="date">
+						<%= appt.service %>
+					</td>
+                    <td class="date">
+						<%= appt.date %>
+					</td><br>
+					<td>
+						<form action="/appts/<%= appt._id %>?_method=DELETE" method="POST" id="deleteAppt">
+							<button type="submit" form="deleteAppt" class="btn btn-danger"><i class="far fa-trash-alt"></i></button>
+						</form>
+					</td>
+				</tr>
+				<% } else { %>
+					<tr>
+					<td class="date">
+						<%= appt.stylist %>
+					</td>
+					<td class="date">
+						<%= appt.service %>
+					</td>
+					<td>
+						<form action="/appts/<%= appt._id %>?_method=DELETE" method="POST" id="deleteAppt">
+							<button type="submit" form="deleteAppt" class="btn btn-danger"><i class="far fa-trash-alt"></i></button>
+						</form>
+					</td>
+				</tr>
+					<% }}); %>
+		</tbody>
+	</table>
 
 
     

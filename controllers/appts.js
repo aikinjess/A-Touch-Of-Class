@@ -34,7 +34,7 @@ function show (req,res) {
         if (err) return next(err);
         Appt.find({appt: appt._id}, function(err, appts) {
             if (err) return next(err);
-            res.render("appts/show", {
+            res.render("appts/new", {
                 appt,
                 title: 'Appointments',
                 user: req.user,
