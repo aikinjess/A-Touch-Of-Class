@@ -1,4 +1,5 @@
-const Appt = require('../models/appt')
+const Appt = require('../models/appt');
+
 
 
 module.exports = {
@@ -6,9 +7,21 @@ module.exports = {
     new: newAppt,
     create,
     show,
-    delete: deleteAppt
+    delete: deleteAppt,
+    createReview
   };
   
+
+function createReview(req, res) {
+    Appt.findById(req.params.id)
+    .then((appt) => {
+      appt.reviews.push(req.body)
+      appt.save()
+      .then(()=> {
+        res.redirect(`/reviews/${ appts }`)
+      })
+    })
+  }
 
 function index(req,res) {
     Appt.find({}, function(err, appts) {
