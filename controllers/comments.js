@@ -20,7 +20,7 @@ function create(req, res) {
   const comment = new Comment(req.body);
   comment.save(function(err) {
     if (err) return res.render("comments/new");
-    res.redirect("comments/show");
+    res.redirect("/appt");
   });
 }
 

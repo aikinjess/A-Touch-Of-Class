@@ -24,7 +24,7 @@ function createReview(req, res) {
   }
 
 function index(req,res) {
-    Appt.find({}, function(err, appts) {
+    Appt.find({client:req.user._id}, function(err, appts) {
         if (err) return next(err);
         res.render("appts/index", { appts });
     })
@@ -35,6 +35,7 @@ function newAppt(req,res) {
 }
 
 function create (req, res) {
+    req.body.client= req.user._id
     const appt = new Appt(req.body);
     appt.save(function(err) {
         if (err) return res.render("appts/new");
