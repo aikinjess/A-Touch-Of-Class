@@ -2,13 +2,16 @@ const router = require("express").Router();
 const apptsCtrl = require("../controllers/appts");
 
 
-router.get("/", apptsCtrl.index);
-router.get("/new", apptsCtrl.new);
-router.post("/", apptsCtrl.create);
-router.get("/:id", apptsCtrl.show);
-router.delete('/:id', apptsCtrl.delete)
+router.get("/", isLoggedIn, apptsCtrl.index);
+router.get("/new", isLoggedIn,apptsCtrl.new);
+router.post("/", isLoggedIn, apptsCtrl.create);
+router.get("/:id", isLoggedIn, apptsCtrl.show);
+router.delete('/:id', isLoggedIn, apptsCtrl.delete)
 
-
+function isLoggedIn(req, res, next) {
+    if (req.isAuthenticated()) return next();
+    res.redirect("/auth/google");
+  }
 
 module.exports = router;
 
