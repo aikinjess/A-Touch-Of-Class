@@ -53,6 +53,47 @@ thead {
 	border-top: none;
 }
 
+body.reviewsPage {
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+  font-variant-caps: small-caps ;
+}
+
+
+#headerReviews{
+  color: #38b6ff ;
+  border-bottom: white 2px double;
+}
+
+div.reviewLocation{
+  background-color: rgb(255, 255, 255);
+  border-radius: 25px;
+  margin-top: 30px;
+  margin-left: 200px;
+  margin-right: 200px;
+}
+#reviewsAll{
+  background-color: rgba(0, 0, 0, 0.655);
+}
+#reviewForm{
+  padding: 10px;
+  color: #38b6ff ;
+  
+}
+#reviewForm input, textarea{
+  margin-top: 10px;
+
+} 
+#reviewForm label, #reviewRating{
+  font-size: 30px;
+  color: #38b6ff ;
+
+}
+.reviewsDisplay{
+  color: orange;
+  background-color: rgba(0, 0, 0, 0.34);
+}
+
 
 .container{
   width: 1000px;

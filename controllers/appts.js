@@ -45,7 +45,6 @@ function create (req, res) {
 
 function show (req,res) {
     Appt.findById(req.params.id, function(err, appt) {
-        if (err) return next(err);
         Appt.find({appt: appt._id}, function(err, appts) {
             if (err) return next(err);
             res.render("appts/new", {

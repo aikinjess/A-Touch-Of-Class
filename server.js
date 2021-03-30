@@ -23,8 +23,7 @@ require("./config/passport");
 const indexRouter = require("./routes/index");
 const authRouter = require("./routes/auth");
 const apptsRouter = require("./routes/appts")
-const commentsRouter = require("./routes/comments");
-const comments = require("./controllers/comments");
+const reviewsRouter = require("./routes/reviews");
 
 
 
@@ -59,7 +58,7 @@ app.use(passport.session());
 app.use("/", indexRouter);
 app.use("/auth", authRouter);
 app.use("/appts", apptsRouter);
-app.use("/comments", commentsRouter);
+app.use("/reviews", reviewsRouter);
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
   next(createError(404));

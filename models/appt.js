@@ -8,9 +8,11 @@ const apptSchema = new Schema({
   service: String,
   date: Date,
   newClient: Boolean,
-  client: {type:Schema.Types.ObjectId, ref:"User"}
-  
-},{
+  client: {type:Schema.Types.ObjectId, ref:"User"},
+  user: [{type: Schema.Types.ObjectId, ref:'User'}],
+  reviews: [{type:Schema.Types.ObjectId, ref: "Review"}],
+},
+{
   timestamps: true,
 });
 
