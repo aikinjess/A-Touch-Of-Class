@@ -26,29 +26,30 @@
       </nav>
 </header>
 
-<body>
+<body class= "reviewsBody">
 
-  <video poster="https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/polina.jpg" id="bgvid" playsinline autoplay muted loop>
-  <!-- 
-- Video needs to be muted, since Chrome 66+ will not autoplay video with sound.
-WCAG general accessibility recommendation is that media such as background video play through only once. Loop turned on for the purposes of illustration; if removed, the end of the video will fade in the same way created by pressing the "Pause" button  -->
 
-<source src="https://player.vimeo.com/external/515626810.sd.mp4?s=885a3301dbadc903f5fb63803b7d18b9d177416d&profile_id=139&oauth2_token_id=57447761" type="video/mp4">
-
+<video id="videoBkg" preload autoplay muted loop>
+  <source src="https://player.vimeo.com/external/515628750.sd.mp4?s=fbafc9e804b9212ccf3df05cd7d74b22cfbd876b&profile_id=164&oauth2_token_id=57447761" type="video/mp4">
 </video>
-<div id="polina">
 
+<div class="hero-section">
+  <h1>eat.</h1>
+  <h1>sleep.</h1>
+  <h1>ski.</h1>
+  <h1>repeat.</h1>
+  <p>Need we say more? <br>Come to <strong>Queenstown</strong> and have the time of your life.</p>
 
-      <% if (user) {%>
+  
+  <% if (user) {%>
         
                           
     
     <div class="hero-section2">
-      <h1>your</h1>
-      <h1>feedback</h1>
-      <h1>matters!</h1>
-      </div>
-                        <div id="reviewsAll">
+      <h1>Your Feedback Matters!</h1><br>
+      <h2>Please let us know how we're doing.</h2><br>>
+                       
+      <div id="reviewsAll">
                           
   
                       
@@ -125,7 +126,33 @@ WCAG general accessibility recommendation is that media such as background video
 
   
   
+</div> 
+  
+  
+  
+  
 </div>
+
+
+
+</body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      
 
 
   
