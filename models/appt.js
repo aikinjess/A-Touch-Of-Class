@@ -11,6 +11,7 @@ const apptSchema = new Schema({
   client: {type:Schema.Types.ObjectId, ref:"User"},
   user: [{type: Schema.Types.ObjectId, ref:'User'}],
   reviews: [{type:Schema.Types.ObjectId, ref: "Review"}],
+  comment: String,
 },
 {
   timestamps: true,

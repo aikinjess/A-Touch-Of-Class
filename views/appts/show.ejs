@@ -1,12 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Update</title>
-</head>
+<%- include('../partials/header.ejs') %>
+
+
 <body>
+    <h1>Update Appointment</h1><br>
     <form action='/appts/<%= appt._id%>?_method=PUT' method='POST'>
         <table class="table">
             <thead>
@@ -36,8 +32,9 @@
                     </td>
                     <td>
                         <input type="datetime-local" name="date" value="2021-03-22T15:30" min="2021-03-22T00:00" max="2022-03-22T00:00">
-                         </td>
-                </tr>
+                         </td><br>
+                         <label>Review</label><br>
+                         <textarea name="comment" row="4" style="width: 18rem;" placeholder="Please review your experience at "><% appt.description %></textarea> <br>
             </tbody>
         </table> <input type="submit" value="Book" />  </form>
     </form>

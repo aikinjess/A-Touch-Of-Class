@@ -32,12 +32,13 @@
 
 
 
-    <h1>Appointment</h1>
+    <h1>Appointment</h1><br>
 	<table class="table" id="flight-index">
 		<thead>
 			<th scope="col">Stylist</th>
 			<th scope="col">Service</th>
 			<th scope="col">Date</th>
+			<th scope="col">Comments</th>
 			<th scope="col">Delete</th>
 		</thead>
 		<tbody>
@@ -54,13 +55,17 @@
 					<td class="date">
 						<a href="/appts/<%= appt._id %>"><%= appt.service %></a>
 					</td>
-                    <td class="date">
+					<td> 
 						<%= appt.date %>
-					</td><br>
+						</td>
 					<td>
+					<%= appt.comment %>	
+						</td>	
+						<td>
 						<form action="/appts/<%= appt._id %>?_method=DELETE" method="POST" id="deleteAppt">
-							<button type="submit" form="deleteAppt" class="btn btn-danger"><i class="far fa-trash-alt"></i></button>
-						</form>
+							<button type="submit" form="deleteAppt" class="btn btn-danger"><i class="far fa-trash-alt"></i></button></td>
+						
+							</form>
 					</td>
 				</tr>
 				<% } else { %>
@@ -71,10 +76,17 @@
 					<td class="date">
 						<a href="/appts/<%= appt._id %>"><%= appt.service %></a>
 					</td>
+					<td> 
+						<%= appt.date %>
+						</td>
 					<td>
+					<%= appt.comment %>	
+						</td>	
+						<td>
 						<form action="/appts/<%= appt._id %>?_method=DELETE" method="POST" id="deleteAppt">
-							<button type="submit" form="deleteAppt" class="btn btn-danger"><i class="far fa-trash-alt"></i></button>
-						</form>
+							<button type="submit" form="deleteAppt" class="btn btn-danger"><i class="far fa-trash-alt"></i></button></td>
+						
+							</form>
 					</td>
 				</tr>
 					<% }}); %>
