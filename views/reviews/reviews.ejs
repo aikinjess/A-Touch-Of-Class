@@ -36,29 +36,56 @@
                         <h4 class="reviewsDisplay">How was your experience? Leave a review below: </h4>
                   
                     <br>
-                  <div id="reviewForm">     
-                    <form action="/reviews " method="POST">
-                      <label>Service</label>
-                      <input name="title" type="text" placeholder="Title"><br>
-                      <label for="reviewRating">Review for: </label>
-                      <input type="radio" id="reviewRating" name="model" value="Chloe">Chloe  
-                      <input type="radio" id="reviewRating" name="model" value="Jessica">Jessica
-                      <input type="radio" id="reviewRating" name="model" value="Miamor">Miamor <br>
+
+                    <br>
+                    <div id="reviewForm">     
+                      <form action="/reviews " method="POST">
+                        <label>Stylist</label><br>
+                        <select name="title" placeholder="Service"><br>
+                        <label for="reviewRating">Review for: </label><br>
+                        <Option value="Jessica" name="model" value=>Jessica</Option> 
+                        <Option value="Chloe" name="model" value=>Chloe </Option>
+                        <Option value="Miamor" name="model" value=>Miamor </Option>
+                        </select><br>
+
+                        <label>Service</label><br>
+                        <select name="service" placeholder="Service"><br>
+                        <Option value="Extensions" name="model" value=>Extensions</Option> 
+                        <Option value="Microlinks" name="model" value=>Microlinks</Option>
+                        <Option value="Box-Braids" name="model" value=>Box-Braids</Option>
+                        <Option value="Wash/Style" name="model" value=>Wash/Style</Option> 
+                        <Option value="Full Color" name="model" value=>Full Color</Option>
+                        <Option value="Partial Color" name="model" value=>Partial Color</Option>
+                        <Option value="Basic Style" name="model" value=>Basic Style</Option> 
+                        <Option value="Kids Wash/Style" name="model" value=>Kids Wash/Style</Option>
+                        <Option value="Hair Cut" name="model" value=>Hair Cut</Option>
+                        <Option value="Consultation" name="model" value=>Consultation</Option> 
                       
-                      <label>Review</label>
-                      <textarea name="content" row="4" style="width: 18rem;" placeholder="Please review your experience at "></textarea> <br>
-                      <label for="reviewRating">Rating: </label>
-                      <input type="radio" id="reviewRating" name="rating" value="Would recommend">👍 Would highly recommend  
-                      <input type="radio" id="reviewRating" name="rating" value="May visit again">Would consider going back 
-                      <input type="radio" id="reviewRating" name="rating" value="Would not recommend">Would not recommend 👎 <br>
                       
-                    
-          
-                      <button id="reviews" type="submit">Submit Review</button>
-                      </form>
-        
-    </div> 
-             </div>           
+                      </select><br>
+  
+  
+                        <label>Review</label><br>
+                        <textarea name="content" row="4" style="width: 18rem;" placeholder="Please review your experience at "></textarea> <br>
+                        
+                        
+                        <label>Rating</label><br>
+                        <select name="rating" placeholder="Rating"><br>
+                        <Option value="Would recommend" name="model" value=>Would recommend</Option>   
+                        <Option value="May visit again" name="model" value=>May visit again</Option>  
+                        <Option value="Would not recommend" name="model" value=>Would not recommend</Option></select>  <br>
+                        
+                      
+            
+                        <button id="reviews" type="submit">Submit Review</button>
+                        </form>
+
+                        </div><br><br><br>
+
+
+
+
+                           
                           <%if (reviews.length){%>
                        
                           <%reviews.forEach((review) =>{%> 
@@ -83,5 +110,4 @@
     
    
     
-    </body>
-    
+   

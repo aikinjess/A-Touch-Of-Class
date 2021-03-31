@@ -13,7 +13,7 @@ html {
 *::after { /* All ::after pseudo-elements */
   /* height & width will now include border & padding by default
      but can be over-ridden as needed */
-  box-sizing: inherit;
+  box-sizing: border-box;
 }
 
 /* resets font size to be 62.5% of the user preference - 
@@ -37,9 +37,6 @@ background: radial-gradient(circle, rgba(255,142,142,0.29175420168067223) 0%, rg
 }
 
 
-nav {
-  font-size: 1.6rem;
-}
 
 main {
   display: flex;
@@ -57,47 +54,8 @@ thead {
 	border-top: none;
 }
 
-body.reviewsPage {
-  font-family: 'Poppins', sans-serif;
-  text-align: center;
-  font-variant-caps: small-caps ;
-}
 
-
-#headerReviews{
-  color: #38b6ff ;
-  border-bottom: white 2px double;
-}
-
-div.reviewLocation{
-  background-color: rgb(255, 255, 255);
-  border-radius: 25px;
-  margin-top: 30px;
-  margin-left: 200px;
-  margin-right: 200px;
-}
-#reviewsAll{
-  background-color: rgba(0, 0, 0, 0.655);
-}
-#reviewForm{
-  padding: 10px;
-  color: #38b6ff ;
-  
-}
-#reviewForm input, textarea{
-  margin-top: 10px;
-
-} 
-#reviewForm label, #reviewRating{
-  font-size: 30px;
-  color: #38b6ff ;
-
-}
-.reviewsDisplay{
-  color: orange;
-  background-color: rgba(0, 0, 0, 0.34);
-}
-
+/*Stylost Cards*/
 
 .container{
   width: 1000px;
@@ -212,6 +170,52 @@ div.reviewLocation{
   text-align: center;
 }
 
+
+
+
+/*Review*/
+#reviewForm {
+  width: auto;
+  margin: auto;
+  max-width: 500px;
+  padding: 20px 30px;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.4);
+  box-shadow: 0 10px 10px 10px  rgba(0, 0, 0, 0.2);
+}
+
+div.reviewLocation{
+  background-color: rgba(255, 255, 255, 0.4);
+  border-radius: 11px;
+  margin-top: 30px;
+  max-width: 500px;
+  width: auto;
+  margin: auto;
+  box-shadow: 0 10px 10px 10px  rgba(0, 0, 0, 0.2);
+
+  
+ 
+}
+
+#reviewForm{
+  padding: 10px;
+
+  
+}
+#reviewForm input, textarea{
+  margin-top: 10px;
+
+} 
+#reviewForm label, #reviewRating{
+  font-size: 30px;
+
+}
+
+
+
+/*Video Background on homepage*/
+
+
 .hero {
   background-size: 150%;
   background-repeat: no-repeat;
@@ -275,10 +279,6 @@ div.reviewLocation{
 
 /*Menu*/
 
-
-
-@import url(https://fonts.googleapis.com/css?family=Dancing+Script:700);
-@import url(https://fonts.googleapis.com/css?family=Crimson+Text:400,600,700,400italic);
 
 
 img {
@@ -408,8 +408,6 @@ h6 {
 	.menu-price-detail {
 		text-align: center;
 	}
-
-
 
 @media (max-width: 568px) {
 

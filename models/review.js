@@ -8,6 +8,7 @@ const reviewSchema= new Schema({
   rating: {type: String, enum: ['Would recommend', 'May visit again', 'Would not recommend']},
   content: String,
   title: String,
+  service: String
  
 },{
   timestamps: true
