@@ -52,7 +52,7 @@
 						<%= appt.stylist %>
 					</td>
 					<td class="date">
-						<%= appt.service %>
+						<a href="/appts/<%= appt._id %>"><%= appt.service %></a>
 					</td>
                     <td class="date">
 						<%= appt.date %>
@@ -69,7 +69,7 @@
 						<%= appt.stylist %>
 					</td>
 					<td class="date">
-						<%= appt.service %>
+						<a href="/appts/<%= appt._id %>"><%= appt.service %></a>
 					</td>
 					<td>
 						<form action="/appts/<%= appt._id %>?_method=DELETE" method="POST" id="deleteAppt">

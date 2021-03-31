@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update</title>
+</head>
+<body>
+    <form action='/appts/<%= appt._id%>?_method=PUT' method='POST'>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Stylist</th>
+                    <th>Service</th>
+                    <th>Date</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <select name="stylist">
+                            <option value="Jessica">Jessica</option>
+                            <option value="Chloe">Chloe</option>
+                            <option value="Miamor">Miamor</option>
+                        </select>
+                    </td>
+                    <td>
+                        <select name="service">
+                            <option value="Extensions">Extensions</option>
+                            <option value="Box Braids">Box Braids</option>
+                            <option value="Wash and Style" >Wash and Style</option>
+                            <option value="Full Color" >LAX</option>
+                            <option value="Partial Color">SAN</option>
+                        </select>
+                    </td>
+                    <td>
+                        <input type="datetime-local" name="date" value="2021-03-22T15:30" min="2021-03-22T00:00" max="2022-03-22T00:00">
+                         </td>
+                </tr>
+            </tbody>
+        </table> <input type="submit" value="Book" />  </form>
+    </form>
+</body>
+</html>

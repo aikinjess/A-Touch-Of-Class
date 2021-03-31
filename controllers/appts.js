@@ -7,6 +7,7 @@ module.exports = {
     new: newAppt,
     create,
     show,
+    update,
     delete: deleteAppt,
     createReview
   };
@@ -47,7 +48,7 @@ function show (req,res) {
     Appt.findById(req.params.id, function(err, appt) {
         Appt.find({appt: appt._id}, function(err, appts) {
             if (err) return next(err);
-            res.render("appts/new", {
+            res.render("appts/show", {
                 appt,
                 title: 'Appointments',
                 user: req.user,
@@ -60,5 +61,12 @@ function deleteAppt(req,res) {
     Appt.deleteOne( {_id : req.params.id}, err => {
         if (err) console.log(err)
         res.redirect("/appts")
+    })
+}
+
+function update(req, res) {
+    Appt.findByIdAndUpdate(req.params.id,req.body)
+    .then(appt => {
+        res.redirect('/appts')
     })
 }
