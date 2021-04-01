@@ -308,7 +308,7 @@ div.reviewLocation{
   font-family: "Nunito", sans-serif;
 
   --primary: #2c2c2c;
-  --blue: #14b0ee;
+  --pink: #ee8595;
 }
 
 
@@ -357,9 +357,9 @@ div.reviewLocation{
   transition: background-color 0.3s;
 }
 .hero-section button:hover {
-  background-color: var(--blue);
+  background-color: var(--pink);
   color: #ffffff;
-  border: 2px solid var(--blue);
+  border: 2px solid var(--pink);
 }
 
 .hero-section h1:nth-child(2) {

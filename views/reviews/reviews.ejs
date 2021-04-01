@@ -1,138 +1,108 @@
 <!DOCTYPE html>
 <html lang="en" class="new-appt-bg">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>A Touch of Class</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="/stylesheets/style.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
-</head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>A Touch of Class</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link rel="stylesheet" href="/stylesheets/style.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" /> </head>
 <header>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-            <a class="navbar-brand" href="/">A TOUCH OF CLASS</a>
-            </button>
-            <div class="collapse navbar-collapse">
-              <ul class="navbar-nav mr-auto">
-                <li class="nav-item">
-                  <a class="nav-link" href="/appts">Appointments</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="/appts/new">Book <i class="far fa-plus-square"></i></a>
-                </li>
-				<li class="nav-item">
-					<a class="nav-link" href="/reviews">Reviews</a>
-				  </li>
-            </div>
-      </nav>
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark"> <a class="navbar-brand" href="/">A TOUCH OF CLASS</a> </button>
+		<div class="collapse navbar-collapse">
+			<ul class="navbar-nav mr-auto">
+				<li class="nav-item"> <a class="nav-link" href="/appts">Appointments</a> </li>
+				<li class="nav-item"> <a class="nav-link" href="/appts/new">Book <i class="far fa-plus-square"></i></a> </li>
+				<li class="nav-item"> <a class="nav-link" href="/reviews">Reviews</a> </li>
+		</div>
+	</nav>
 </header>
 
-<body class= "reviewsBody">
-
-
-<video id="videoBkg" preload autoplay muted loop>
-  <source src="https://player.vimeo.com/external/515628750.sd.mp4?s=fbafc9e804b9212ccf3df05cd7d74b22cfbd876b&profile_id=164&oauth2_token_id=57447761" type="video/mp4">
-</video>
-
-<div class="hero-section">
-
-  <% if (user) {%>
-        
-                          
-    
-    <div class="hero-section2">
-     <h1>Your Feedback Matters!</h1><br>
-      <h2>Please let us know how we're doing.</h2></div><br>
-                       
-      <div id="reviewsAll">
-                          
-  
-                      
-                      <div id="reviewForm2">     
-                        <form action="/reviews " method="POST">
-                          <label>Stylist</label><br>
-                          <select name="title" placeholder="Service"><br>
-                          <label for="reviewRating">Review for: </label><br>
-                          <Option value="Jessica" name="model" value=>Jessica</Option> 
-                          <Option value="Chloe" name="model" value=>Chloe </Option>
-                          <Option value="Miamor" name="model" value=>Miamor </Option>
-                          </select><br>
-  
-                          <label>Service</label><br>
-                          <select name="service" placeholder="Service"><br>
-                          <Option value="Extensions" name="model" value=>Extensions</Option> 
-                          <Option value="Microlinks" name="model" value=>Microlinks</Option>
-                          <Option value="Box-Braids" name="model" value=>Box-Braids</Option>
-                          <Option value="Wash/Style" name="model" value=>Wash/Style</Option> 
-                          <Option value="Full Color" name="model" value=>Full Color</Option>
-                          <Option value="Partial Color" name="model" value=>Partial Color</Option>
-                          <Option value="Basic Style" name="model" value=>Basic Style</Option> 
-                          <Option value="Kids Wash/Style" name="model" value=>Kids Wash/Style</Option>
-                          <Option value="Hair Cut" name="model" value=>Hair Cut</Option>
-                          <Option value="Consultation" name="model" value=>Consultation</Option> 
-                        
-                        
-                        </select><br>
-    
-    
-                          <label>Review</label><br>
-                          <textarea name="content" row="4" style="width: 18rem;" placeholder="Please review your experience at "></textarea> <br>
-                          
-                          
-                          <label>Rating</label><br>
-                          <select name="rating" placeholder="Rating"><br>
-                          <Option value="Would recommend" name="model" value=>Would recommend</Option>   
-                          <Option value="May visit again" name="model" value=>May visit again</Option>  
-                          <Option value="Would not recommend" name="model" value=>Would not recommend</Option></select>  <br>
-                          
-                        
-              
-                          <button id="reviews" type="submit">Submit Review</button>
-                          </form>
-  
-                          </div><br><br><br>
-  
-  
-  
-  
-                             
-                            <%if (reviews.length){%>
-                         
-                            <%reviews.forEach((review) =>{%> 
-                           
-                              <div class="reviewLocation">
-                                 
-                                <div> <h4><strong><%=review.title%></strong></h4><h5><%=review.rating%></h5></div>
-                                
-                               <h4><%=review.content%></h4> 
-                               
-                              <h5>Posted by:<%=review.postedBy%></h5>
-                   
-                              </div>
-                            <%})%>
-                         <%} else {%>
-                 <br><h5 class="reviews"> Be the first to review  </h5> 
-                 <%}%>
-               </div>
-      <%}%>
-      </div>
-    </div>
-                           </body>
-
-  
-  
-</div> 
-  
-  
-  
-  
-</div>
-
-
-
+<body class="reviewsBody">
+	<video id="videoBkg" preload autoplay muted loop>
+		<source src="https://player.vimeo.com/external/515628750.sd.mp4?s=fbafc9e804b9212ccf3df05cd7d74b22cfbd876b&profile_id=164&oauth2_token_id=57447761" type="video/mp4"> </video>
+	<div class="hero-section">
+		<% if (user) {%>
+			<div class="hero-section2">
+				<h1>Your Feedback Matters!</h1>
+				<br>
+				<h2>Please let us know how we're doing.</h2></div>
+			<br>
+			<div id="reviewsAll">
+				<div id="reviewForm2">
+					<form action="/reviews " method="POST">
+						<label>Stylist</label>
+						<br>
+						<select name="title" placeholder="Service">
+							<br>
+							<label for="reviewRating">Review for: </label>
+							<br>
+							<Option value="Jessica" name="model" value=>Jessica</Option>
+							<Option value="Chloe" name="model" value=>Chloe </Option>
+							<Option value="Miamor" name="model" value=>Miamor </Option>
+						</select>
+						<br>
+						<label>Service</label>
+						<br>
+						<select name="service" placeholder="Service">
+							<br>
+							<Option value="Extensions" name="model" value=>Extensions</Option>
+							<Option value="Microlinks" name="model" value=>Microlinks</Option>
+							<Option value="Box-Braids" name="model" value=>Box-Braids</Option>
+							<Option value="Wash/Style" name="model" value=>Wash/Style</Option>
+							<Option value="Full Color" name="model" value=>Full Color</Option>
+							<Option value="Partial Color" name="model" value=>Partial Color</Option>
+							<Option value="Basic Style" name="model" value=>Basic Style</Option>
+							<Option value="Kids Wash/Style" name="model" value=>Kids Wash/Style</Option>
+							<Option value="Hair Cut" name="model" value=>Hair Cut</Option>
+							<Option value="Consultation" name="model" value=>Consultation</Option>
+						</select>
+						<br>
+						<label>Review</label>
+						<br>
+						<textarea name="content" row="4" style="width: 18rem;" placeholder="Please review your experience at "></textarea>
+						<br>
+						<label>Rating</label>
+						<br>
+						<select name="rating" placeholder="Rating">
+							<br>
+							<Option value="Would recommend" name="model" value=>Would recommend</Option>
+							<Option value="May visit again" name="model" value=>May visit again</Option>
+							<Option value="Would not recommend" name="model" value=>Would not recommend</Option>
+						</select>
+						<br>
+						<button id="reviews" type="submit">Submit Review</button>
+					</form>
+				</div>
+				<br>
+				<br>
+				<br>
+				<%if (reviews.length){%>
+					<%reviews.forEach((review) =>{%>
+						<div class="reviewLocation">
+							<div>
+								<h4><strong><%=review.title%></strong></h4>
+								<h5><%=review.rating%></h5></div>
+							<h4><%=review.content%></h4>
+							<h5>Posted by:<%=review.postedBy%></h5> </div>
+						<%})%>
+							<%} else {%>
+								<br>
+								<h5 class="reviews"> Be the first to review  </h5>
+								<%}%>
+			</div>
+			<%}%>
+	</div>
+	</div>
 </body>
+</div>
+</div>
+</body>
+
+</html>
 
 
 
@@ -156,7 +126,6 @@
   
 
 
-    <%-include('../partials/footer')%>
     
    
     
