@@ -413,13 +413,6 @@ div.reviewLocation{
 /* ---------------------------------------------- */
 
 
-@media (max-width: 767px) {
-
-	.menu-title,
-	.menu-detail,
-	.menu-price-detail {
-		text-align: center;
-	}
 
 @media (max-width: 568px) {
 
@@ -459,5 +452,4 @@ div.reviewLocation{
 		margin: 0 0 5px;
 	}
 
-
-
+}

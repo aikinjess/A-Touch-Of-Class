@@ -86,8 +86,18 @@
 							<div>
 								<h4><strong><%=review.title%></strong></h4>
 								<h5><%=review.rating%></h5></div>
-							<h4><%=review.content%></h4>
-							<h5>Posted by:<%=review.postedBy%></h5> </div>
+							<h4><strong><%=review.content%></strong></h4>
+							<h5>Posted by:<%=review.postedBy%></h5>
+              <img 
+              height="50"
+              id="avatarPhoto"
+              src="<%= user.avatar ? user.avatar :
+               'http://theoldreader.com/kittens/300/300/' %>"
+              alt=""
+            > 
+            </div><br>
+      
+              
 						<%})%>
 							<%} else {%>
 								<br>
