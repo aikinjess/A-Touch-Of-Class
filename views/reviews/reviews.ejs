@@ -59,11 +59,12 @@
 							<Option value="Kids Wash/Style" name="model" value=>Kids Wash/Style</Option>
 							<Option value="Hair Cut" name="model" value=>Hair Cut</Option>
 							<Option value="Consultation" name="model" value=>Consultation</Option>
+              <Option value="Other" name="model" value=>Other</Option>
 						</select>
 						<br>
 						<label>Review</label>
 						<br>
-						<textarea name="content" row="4" style="width: 18rem;" placeholder="Please review your experience at "></textarea>
+						<textarea name="content" row="4" style="width: 18rem;" placeholder="Please review your experience"></textarea>
 						<br>
 						<label>Rating</label>
 						<br>
@@ -90,7 +91,7 @@
 							<h5>Posted by:<%=review.postedBy%></h5>
               <img 
               height="50"
-              id="avatarPhoto"
+              id="avatar"
               src="<%= user.avatar ? user.avatar :
                'http://theoldreader.com/kittens/300/300/' %>"
               alt=""
