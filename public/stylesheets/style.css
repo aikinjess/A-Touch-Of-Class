@@ -59,7 +59,7 @@ thead {
 }
 
 
-/*Stylost Cards*/
+/*Stylist Cards*/
 
 .container{
   width: 1000px;
@@ -68,7 +68,7 @@ thead {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  padding: 50px;
+  padding: 50px 0px;
 }
 
 .box{
@@ -107,7 +107,7 @@ thead {
   left: 10%;
   width: 80%;
   height: 60px;
-  background: rgba(255, 255, 255, 0.694);
+  background: rgba(255, 255, 255, 0.872);
   transition: 0.5s;
   overflow: hidden;
 
