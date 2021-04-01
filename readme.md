@@ -7,7 +7,7 @@ This project is a full-stack salon booking application where the user is able to
 
 ## Getting Started
 
-### [Open application here!](http://jessicaaikin.surge.sh/)
+### [Open application here!]()
 
 ## Screenshots
 
