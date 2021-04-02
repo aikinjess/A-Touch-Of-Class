@@ -7,7 +7,7 @@ This project is a full-stack salon booking application where the user is able to
 
 ## Getting Started
 
-### [Link to Trell Board](https://trello.com/b/d4dizoes)
+### [Link to Trello Board](https://trello.com/b/d4dizoes)
 
 ### [Open application here!](https://a-touch-of-class.herokuapp.com)
 
